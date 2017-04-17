@@ -3,7 +3,7 @@ import React from 'react'
 
 const names = ['Alice', 'Emily', 'Kate']
 
-const jsxDemo1 = React.createClass({
+const JsxDemo1 = React.createClass({
     render: function () {
         return <div className="names">
             {names.map((value, key) => {
@@ -19,7 +19,7 @@ const domList = [
     <h3>This is jsx demo</h3>
 ]
 
-const jsxDemo2 = React.createClass({
+const JsxDemo2 = React.createClass({
     render: function () {
         return <div className="dom-list">
             {domList}
@@ -27,4 +27,4 @@ const jsxDemo2 = React.createClass({
     }
 })
 
-module.exports = jsxDemo2
+module.exports = JsxDemo2

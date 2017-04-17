@@ -19,8 +19,23 @@ const config = {
                 require.ensure([], (require) => {
                     callback(null, require('pages/jsx'))
                 }, 'JSX')
-            },
-            childRoutes: []
+            }
+        },
+        {
+            path: '/component/child',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/child'))
+                }, 'child')
+            }
+        },
+        {
+            path: '/component/children',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/children'))
+                }, 'children')
+            }
         }
     ]
 }
