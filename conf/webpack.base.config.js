@@ -12,7 +12,10 @@ module.exports = {
         alias: {
             'common': path.resolve(__dirname, '../src/common'),
             'images': path.resolve(__dirname, '../src/images'),
-            'pages': path.resolve(__dirname, '../src/pages')
+            'pages': path.resolve(__dirname, '../src/pages'),
+            'demo-common': path.resolve(__dirname, '../demo/common'),
+            'demo-images': path.resolve(__dirname, '../demo/images'),
+            'demo-pages': path.resolve(__dirname, '../demo/pages')
         },
         extensions: ['', '.js', '.json', '.less', '.css']
     },

@@ -21,7 +21,8 @@ Object.getOwnPropertyNames((webpackBase.entry || {})).map(function (name) {
 config.output = {
     path: path.resolve(__dirname, '../static/'),
     publicPath: httpPath,
-    filename: 'js/[name].bundle.js'
+    filename: 'js/[name].bundle.js',
+    chunkFilename: "js/[name].[hash].js"
 }
 
 // webpack-dev-server
@@ -38,11 +39,12 @@ config.plugins = (webpackBase.plugins || []).concat(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-        title: 'WebSocket',
+        title: 'react-demo',
         filename: 'index.html',
         template: path.resolve(__dirname, './template/index.dev.html'),
         favicon: path.resolve(__dirname, '../src/images/favicon.png'),
-        inject: 'body'
+        inject: 'body',
+        chunks: ['vendor', 'app']
         // inject: true
     })
 )

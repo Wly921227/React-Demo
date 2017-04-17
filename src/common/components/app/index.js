@@ -1,4 +1,7 @@
+require('./style.less')
+
 const React = require('react')
+const {Link} = require('react-router')
 const PropType = require('prop-types')
 
 class App extends React.Component {
@@ -8,9 +11,15 @@ class App extends React.Component {
     }
 
     render() {
-        return <div>
-            <h1>Demo App</h1>
-            {this.props.children}
+        return <div className="app">
+            <div className="home">
+                <span type="btn" className="btn btn-default">
+                    <Link to="/">首页</Link>
+                </span>
+            </div>
+            <div className="content">
+                {this.props.children}
+            </div>
         </div>
     }
 }

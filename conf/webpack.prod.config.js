@@ -17,8 +17,7 @@ Object.getOwnPropertyNames((webpackBase.entry || {})).map(function (name) {
 config.output = {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: 'js/[name].bundle.js',
-    chunkFilename: "js/[name].[hash].js"
+    filename: 'js/[name].bundle.js'
 }
 
 // 插件
