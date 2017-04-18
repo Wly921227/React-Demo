@@ -52,6 +52,14 @@ const config = {
                     callback(null, require('pages/component/lifeCycle'))
                 }, 'lifeCycle')
             }
+        },
+        {
+            path: '/component/communication',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/communication'))
+                }, 'communication')
+            }
         }
     ]
 }

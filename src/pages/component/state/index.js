@@ -87,3 +87,61 @@ class State extends React.Component {
 }
 
 module.exports = State
+
+/**
+ * 数组
+ * React.PropTypes.array
+ *
+ * Boolean 必需
+ * React.PropTypes.bool.isRequired
+ *
+ * 函数
+ * React.PropTypes.func
+ *
+ * 数字
+ * React.PropTypes.number
+ *
+ * 元素
+ * React.PropTypes.object
+ *
+ * 字串
+ * React.PropTypes.string
+ *
+ * 任何类型的: numbers, strings, elements 或者任何这种类型的阵列
+ * React.PropTypes.node
+ *
+ * React 元素
+ * React.PropTypes.element
+ *
+ * 某种XXX类别的实体
+ * React.PropTypes.instanceOf(XXX)
+ *
+ * 其中一个字串
+ * React.PropTypes.oneOf(['foo', 'bar'])
+ *
+ * 其中一种格式类型
+ * React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array])
+ *
+ * 某种类型的数组
+ * React.PropTypes.arrayOf(React.PropTypes.string)
+ *
+ * 具有某种属性类型的元素
+ * React.PropTypes.objectOf(React.PropTypes.string)
+ *
+ * 是否符合指定格式的元素
+ * React.PropTypes.shape({
+ *   color: React.PropTypes.string,
+ *   fontSize: React.PropTypes.number
+ * });
+ *
+ * 可以是任何格式，必须
+ * React.PropTypes.any.isRequired
+ *
+ * 自定义格式(当不符合的时候，会显示Error)
+ * 不要用`console.warn` 或者 throw, 因为它在`oneOfType` 的情况下无效。
+ * customPropType: function(props, propName, componentName) {
+ *   if (!/^[0-9]/.test(props[propName])) {
+ *     return new Error('Validation failed!');
+ *   }
+ * }
+ */
