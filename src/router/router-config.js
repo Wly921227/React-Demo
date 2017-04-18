@@ -36,6 +36,14 @@ const config = {
                     callback(null, require('pages/component/children'))
                 }, 'children')
             }
+        },
+        {
+            path: '/component/state',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/state'))
+                }, 'state')
+            }
         }
     ]
 }
