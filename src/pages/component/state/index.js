@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Row extends React.Component {
+class Row1 extends React.Component {
     static propTypes = {
         label: PropTypes.string.isRequired,
         value: PropTypes.string.isRequired
@@ -18,6 +18,17 @@ class Row extends React.Component {
             <span>{value}</span>
         </div>)
     }
+}
+
+const Row2 = ({label, value}) => {
+    return (<div className="row">
+        <label>{label}：</label>
+        <span>{value}</span>
+    </div>)
+}
+Row2.propTypes = {
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired
 }
 
 class State extends React.Component {
@@ -62,9 +73,11 @@ class State extends React.Component {
 
     render() {
         const children = []
+        // for (let i = 0; i < 5000; i++) {
         for (let key in this.state) {
-            children.push(<Row label={key} value={this.state[key]}/>)
+            children.push(<Row1 label={key} value={this.state[key]}/>)
         }
+        // }
 
         return (<div className="state">
             {children}
