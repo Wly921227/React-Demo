@@ -44,6 +44,14 @@ const config = {
                     callback(null, require('pages/component/state'))
                 }, 'state')
             }
+        },
+        {
+            path: '/component/lifeCycle',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/lifeCycle'))
+                }, 'lifeCycle')
+            }
         }
     ]
 }

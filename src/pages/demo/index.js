@@ -7,7 +7,8 @@ const links = [
     {src: '/JSX', title: 'JSX使用'},
     {src: '/component/child', title: '组件属性'},
     {src: '/component/children', title: '组件包含子节点'},
-    {src: '/component/state', title: '组件状态'}
+    {src: '/component/state', title: '组件状态'},
+    {src: '/component/lifeCycle', title: '组件生命周期'}
 ]
 
 class Demo extends Component {

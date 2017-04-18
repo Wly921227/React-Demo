@@ -73,9 +73,10 @@ class State extends React.Component {
 
     render() {
         const children = []
+        let i = 0
         // for (let i = 0; i < 5000; i++) {
         for (let key in this.state) {
-            children.push(<Row1 label={key} value={this.state[key]}/>)
+            children.push(<Row1 key={i++} label={key} value={this.state[key]}/>)
         }
         // }
 
