@@ -68,6 +68,14 @@ const config = {
                     callback(null, require('pages/component/event'))
                 }, 'event')
             }
+        },
+        {
+            path: '/component/form',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/form'))
+                }, 'form')
+            }
         }
     ]
 }

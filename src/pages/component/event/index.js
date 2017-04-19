@@ -8,6 +8,11 @@ class Event extends Component {
         this.constClickBind = this.constClickBind.bind(this, this.state.output)
     }
 
+    clickDefault(event) {
+        console.log(this)
+        console.log(event.target.textContent)
+    }
+
     constClickBind(params, event) {
         console.log(params)
         console.log(event.target.textContent)
@@ -36,6 +41,7 @@ class Event extends Component {
         } = this.state
 
         return (<div className="event">
+            <button onClick={this.clickDefault}>不处理作用域</button>
             <button onClick={this.clickArrowsFunc}>声明箭头函数变量</button>
             <button onClick={this.constClickBind}>构造函数bind绑定</button>
             <button onClick={this.clickBind.bind(this, output += 1)}>bind绑定</button>
