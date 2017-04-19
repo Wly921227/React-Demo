@@ -60,6 +60,14 @@ const config = {
                     callback(null, require('pages/component/communication'))
                 }, 'communication')
             }
+        },
+        {
+            path: '/component/event',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/event'))
+                }, 'event')
+            }
         }
     ]
 }

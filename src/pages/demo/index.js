@@ -9,6 +9,7 @@ const links = [
     {src: '/component/children', title: '组件包含子节点'},
     {src: '/component/state', title: '组件状态'},
     {src: '/component/lifeCycle', title: '组件生命周期'},
+    {src: '/component/event', title: '组件事件'},
     {src: '/component/communication', title: '组件通信'}
 ]
 
