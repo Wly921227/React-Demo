@@ -38,9 +38,9 @@ var Child3 = createReactClass({
     },
     render: function () {
         return (<div className="child-1">
-            Child three\'s name is&nbsp;
+            Child three's name is&nbsp;
             <input ref="inputName" type="text" value={this.props.childName}
-                   onClick={this.handleClick}/>.
+                   onClick={this.handleClick} readOnly/>.
         </div>)
     },
     handleClick: function (event) {
@@ -53,6 +53,7 @@ var Child3 = createReactClass({
 
 
 class Parent extends React.Component {
+
     render() {
         let name3 = 'Spike'
         return (<div className="parent">

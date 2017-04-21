@@ -20,7 +20,7 @@ var loaders = [
     },
     // images
     {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|jpeg)$/,
         loader: 'url?limit=1000'   // 单位b
     }
 ]
@@ -32,18 +32,18 @@ if (process.env.NODE_ENV === 'production') {
         {
             test: /\.less?$/,
             exclude: /(node_modules)/,
-            loader: ExtractTextPlugin.extract('style', 'css!postcss!less')
+            loader: ExtractTextPlugin.extract('style', 'css!less')
         },
         // css
         {
             test: /\.css?$/,
             exclude: /(node_modules)/,
-            loader: ExtractTextPlugin.extract('style', 'css!postcss')
+            loader: ExtractTextPlugin.extract('style', 'css')
         }
     ])
 } else {
     // 开发环境css热加载
-    loaders = loaders.concat(loaders, [
+    loaders = loaders.concat([
         // less
         {
             test: /\.less?$/,
