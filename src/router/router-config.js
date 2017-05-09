@@ -85,6 +85,15 @@ const config = {
                     callback(null, require('pages/reduxDemo'))
                 }, 'redux')
             }
+        },
+        // mobx
+        {
+            path: '/mobx/demo',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/mobxDemo'))
+                }, 'mobx')
+            }
         }
     ]
 }

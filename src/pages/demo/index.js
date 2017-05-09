@@ -1,7 +1,7 @@
 require('./style.css')
 
-import React, {Component} from 'react'
-import {Link} from 'react-router'
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 const links = [
     {src: '/JSX', title: 'JSX使用'},
@@ -13,7 +13,9 @@ const links = [
     {src: '/component/communication', title: '组件通信'},
     {src: '/component/form', title: '表单'},
     // redux
-    {src: '/redux/demo', title: 'redux Demo'}
+    {src: '/redux/demo', title: 'redux Demo'},
+    // mobx
+    {src: '/mobx/demo', title: 'mobx Demo'}
 ]
 
 class Demo extends Component {
