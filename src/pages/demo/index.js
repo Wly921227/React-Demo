@@ -11,7 +11,9 @@ const links = [
     {src: '/component/lifeCycle', title: '组件生命周期'},
     {src: '/component/event', title: '组件事件'},
     {src: '/component/communication', title: '组件通信'},
-    {src: '/component/form', title: '表单'}
+    {src: '/component/form', title: '表单'},
+    // redux
+    {src: '/redux/demo', title: 'redux Demo'}
 ]
 
 class Demo extends Component {

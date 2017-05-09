@@ -76,6 +76,15 @@ const config = {
                     callback(null, require('pages/component/form'))
                 }, 'form')
             }
+        },
+        // redux
+        {
+            path: '/redux/demo',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/reduxDemo'))
+                }, 'redux')
+            }
         }
     ]
 }
