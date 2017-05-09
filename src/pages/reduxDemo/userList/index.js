@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import AddUser from './AddUser'
 import UserList from './UserList'

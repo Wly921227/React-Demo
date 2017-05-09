@@ -1,5 +1,5 @@
-import {combineReducers} from 'redux'
-import {UserListFilter} from './actions'
+import { combineReducers } from 'redux'
+import { UserListFilter } from './actions'
 
 import _ from 'lodash'
 

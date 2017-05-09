@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class UserList extends Component {
@@ -23,7 +23,7 @@ class UserList extends Component {
             </li>)
         })
 
-        return (<div className="list-add">
+        return (<div className="list">
             <ul>
                 {List}
             </ul>
