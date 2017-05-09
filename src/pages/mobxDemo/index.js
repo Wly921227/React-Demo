@@ -3,6 +3,8 @@ require('./style.less')
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import State from './mobx'
+import DevTools from 'mobx-react-devtools'
+const isDev = process.env.NODE_ENV !== 'production'
 
 import Node from './component'
 
@@ -15,11 +17,6 @@ class Directory extends Component {
     }
 
     handleOpenClick(node) {
-        if (node.open) {
-            console.log('关闭')
-        } else {
-            console.log('打开')
-        }
         node.open = !node.open
     }
 
@@ -29,8 +26,12 @@ class Directory extends Component {
         } = this.state.appState
 
         return (<div className="directory">
-            <button onClick={this.handleOpenClick.bind(this, list)}>点我</button>
             <Node node={list} click={this.handleOpenClick.bind(this)}/>
+            {
+                isDev ?
+                    <DevTools/>
+                    : null
+            }
         </div>)
     }
 }
