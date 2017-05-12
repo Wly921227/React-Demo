@@ -77,6 +77,14 @@ const config = {
                 }, 'form')
             }
         },
+        {
+            path: '/component/pureComponent',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('pages/component/pureComponent'))
+                }, 'pureComponent')
+            }
+        },
         // redux
         {
             path: '/redux/demo',

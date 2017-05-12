@@ -12,6 +12,7 @@ const links = [
     {src: '/component/event', title: '组件事件'},
     {src: '/component/communication', title: '组件通信'},
     {src: '/component/form', title: '表单'},
+    {src: '/component/pureComponent', title: '纯组件'},
     // redux
     {src: '/redux/demo', title: 'redux Demo'},
     // mobx
