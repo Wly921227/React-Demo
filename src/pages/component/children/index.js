@@ -15,11 +15,11 @@ class Child extends React.Component {
 class HasChildren extends React.Component {
     render() {
         let children = React.Children.map(this.props.children, child => {
-            if (child.type === Child) {
+            // if (child.type === Child) {
                 return React.cloneElement(child, {
                     fromParent: 'from parent props'
                 })
-            }
+            // }
         })
 
         return (<div className="has-children">

@@ -23,6 +23,7 @@ const JsxDemo2 = React.createClass({
     render: function () {
         return <div className="dom-list">
             {domList}
+            <JsxDemo1/>
         </div>
     }
 })

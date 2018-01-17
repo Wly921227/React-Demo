@@ -1,4 +1,4 @@
-require('./style.css')
+require('./style.less')
 
 import React, { Component } from 'react'
 import { Link } from 'react-router'
@@ -20,12 +20,28 @@ const links = [
 ]
 
 class Demo extends Component {
-    render() {
+    render () {
         return (<div className="demo">
+            {/*<div className="wap middle">*/}
+            {/*<div className="loading middle">*/}
+            {/*<div className="outside">*/}
+            {/*</div>*/}
+            {/*<div className="inside">*/}
+            {/*<div className="circle">*/}
+            {/*<div className="left">*/}
+            {/*</div>*/}
+            {/*<div className="right">*/}
+            {/*</div>*/}
+            {/*</div>*/}
+            {/*</div>*/}
+            {/*</div>*/}
+            {/*</div>*/}
             <ul>
                 {links.map((value, key) => {
                     return (<li key={key} className="link">
-                        <div className="btn btn-default"><Link to={value.src}>{value.title}</Link></div>
+                        <div className="btn btn-default">
+                            <Link to={value.src}>{value.title}</Link>
+                        </div>
                     </li>)
                 })}
             </ul>

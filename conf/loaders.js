@@ -1,5 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+// webpack  .babelrc
 var loaders = [
     // JS
     {

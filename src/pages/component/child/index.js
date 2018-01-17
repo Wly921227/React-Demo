@@ -7,6 +7,12 @@ var Child1 = React.createClass({
     propTypes: {
         childName: React.PropTypes.string.isRequired,
     },
+    getDefaultProps() {
+        return {}
+    },
+    getInitialState() {
+        return {}
+    },
     render: function () {
         return (<div className="child-1">
             Child one's name is {this.props.childName}.

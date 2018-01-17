@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+// React.PropTypes.string
 class Row1 extends React.Component {
     static propTypes = {
         label: PropTypes.string.isRequired,
@@ -79,7 +79,7 @@ class State extends React.Component {
             children.push(<Row1 key={i++} label={key} value={this.state[key]}/>)
         }
         // }
-
+        console.log(children)
         return (<div className="state">
             {children}
         </div>)
